@@ -13,15 +13,6 @@ Backend: Node.js, Express.js
 Frontend: HTML, CSS
 Payment Integration: Stripe API
 
-# Project Structure
-.
-├── public/
-│   ├── index.html      # Frontend HTML file
-│   ├── styles.css      # Frontend CSS file
-├── server.js           # Node.js server file
-├── package.json        # Project dependencies
-└── README.md           # Project documentation
-
 # Usage
 1] Open the Application
 -Navigate to http://localhost:3000 in your web browser.
@@ -36,4 +27,4 @@ Payment Integration: Stripe API
 - After completing or canceling the payment, you will be redirected back to a success or cancel page.
 
 # Live Demo
-Live Application:
+Live Application: https://appinclass.onrender.com
