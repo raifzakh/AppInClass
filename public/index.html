@@ -1,0 +1,24 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stripe Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Buy Sample Product</h1>
+  <button id="checkout-button">Checkout</button>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    const checkoutButton = document.getElementById('checkout-button');
+    checkoutButton.addEventListener('click', async () => {
+      const response = await fetch('/create-checkout-session', { method: 'POST' });
+      const { id } = await response.json();
+      const stripe = Stripe('pk_test_51QOqzCLlnrhCHPZe1g7rrMt1k6XPD974idNp2fZTox4xEbu9m7F1Z8PFQuPV6B0HQX4mVjoUVyY0Khqrhf8OH6bz00tIH5BLYv'); // Add publishable key later
+      stripe.redirectToCheckout({ sessionId: id });
+    });
+  </script>
+</body>
+</html>
