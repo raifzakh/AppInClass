@@ -16,7 +16,7 @@
     checkoutButton.addEventListener('click', async () => {
       const response = await fetch('/create-checkout-session', { method: 'POST' });
       const { id } = await response.json();
-      const stripe = Stripe('pk_test_51QOqzCLlnrhCHPZe1g7rrMt1k6XPD974idNp2fZTox4xEbu9m7F1Z8PFQuPV6B0HQX4mVjoUVyY0Khqrhf8OH6bz00tIH5BLYv'); // Add publishable key later
+      const stripe = Stripe('Add your publishable key');
       stripe.redirectToCheckout({ sessionId: id });
     });
   </script>
