@@ -1,6 +1,6 @@
 // server.js
 const express = require('express');
-const stripe = require('stripe')('sk_test_51QOqzCLlnrhCHPZebiR76d3Fnesl0jD9O6BjU2oQHQKXPYyT4igGZJ90H1AQCVTk5W9KrkPHtwSIlQFKtLBy6yZz00XJjRC0iz'); // Add secret key later
+const stripe = require('stripe')('Add Your Secret Keys'); 
 const app = express();
 
 app.use(express.static('public'));
